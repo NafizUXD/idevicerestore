@@ -147,7 +147,10 @@ AC_CACHE_CHECK(for reverse proxy support in libimobiledevice, ac_cv_reverse_prox
 		reverse_proxy_client_create_with_port(NULL, &rp, REVERSE_PROXY_DEFAULT_PORT);
 	]])],[ac_cv_reverse_proxy=yes],[ac_cv_reverse_proxy=no]))
 if test "$ac_cv_reverse_proxy" = "yes"; then
-	AC_DEFINE(HAVE_REVERSE_PROXY, 1, [Define if libimobiledevice has a reverse proxy implementation])
+  # Nafiz -
+	# AC_DEFINE(HAVE_REVERSE_PROXY, 1, [Define if libimobiledevice has a reverse proxy implementation])
+  # Nafiz +
+	AC_DEFINE(HAVE_REVERSE_PROXY, 0, [Define if libimobiledevice has a reverse proxy implementation])
 fi
 
 AC_ARG_WITH([limera1n],
